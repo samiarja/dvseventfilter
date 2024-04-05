@@ -1,7 +1,7 @@
 # A General Solution to Hot Pixels for Event Camera
 
 <p align="center" width="100%">
-    <img width="50%" src="images/hot_pixel_package_logo2.png">
+    <img width="50%" src="static/images/hot_pixel_package_logo2.png">
 </p>
 
 Project page: https://samiarja.github.io/dvseventfilter/
