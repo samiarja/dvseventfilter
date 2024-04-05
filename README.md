@@ -1,4 +1,5 @@
-# A General Solution to Hot Pixels for Event Camera
+# A General Solution to Information Removal for Event Cameras
+
 
 <p align="center" width="100%">
     <img width="50%" src="static/images/hot_pixel_package_logo2.png">
