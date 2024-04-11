@@ -458,6 +458,11 @@ body {
   background-color: #9C27B0; /* Purple */
   color: #fff;
 }
+
+#astrometry {
+  background-color: #4eb027; /* Purple */
+  color: #fff;
+}
 #show-hot-pixels {
   background-color: #000; /* Black */
   color: #fff; /* White */
@@ -530,3 +535,23 @@ body {
   margin: 10px;
   text-align: center;
 }
+
+.matrix {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.matrix-row {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Spacing between rows */
+}
+.matrix-row button {
+  margin: 0 5px; /* Spacing between buttons */
+  flex: 1; /* Makes buttons expand to fill the row evenly */
+}
+
+

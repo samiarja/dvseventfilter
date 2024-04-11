@@ -52,7 +52,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">A General Solution to Information Removal for Event Cameras</h1>
+            <!-- <h1 class="title is-1 publication-title">A General Solution to Information Removal for Event Cameras</h1> -->
+            <h1 class="title is-1 publication-title">A General-Purpose Algorithm for Hot Pixel and Background Noise Removal for Neuromorphic Space Imaging</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -133,7 +134,6 @@
 
 
 
-
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -142,14 +142,14 @@
         <h2 class="title is-3">Summary</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            In this work, we explore various methodologies for filtering hot pixels from sparse event data, introducing a novel evaluation metric specifically designed for assessing hot pixel activity removal. We showcase the efficacy of these algorithms across two applications within the domain of neuromorphic space imaging: star detection and astrometry, and event-based star autofocus. A comparative analysis of existing hot pixel filter algorithms is conducted alongside the introduction of new filtering algorithms. These methods are rigorously evaluated and ranked based on their performance, from least to most effective, providing a comprehensive understanding of their capabilities neuromorphic space imaging.
           </p>
         </div>
       </div>
       <!-- Image and Video Column -->
       <div class="column is-half">
         <div class="image-container" style="text-align:center;">
-          <img src="static/images/speed_accuracy_plot.png" alt="Image ALT TEXT" style="max-width: 70%; height: auto;; margin-top: 40px;">
+          <img src="static/images/speed_accuracy_eval.png" alt="Image ALT TEXT" style="max-width: 90%; height: auto;; margin-top: 30px;">
           <!-- <div class="video-title">Output of the network at every processing step</div>
           <img src="static/videos/motion_segmentation_network_EV-IMO_box_seq_01.gif" alt="GIF ALT TEXT" style="max-width: 100%; height: auto;"/>
         </div> -->
@@ -181,6 +181,39 @@
 <!-- End teaser video -->
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 44px;">Choose a method</h2> -->
+
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">The timeline of a hot pixel varies</h1>
+
+
+
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">What cause them to appear?</h1>
+
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
+    Hot pixels have an abnormally high firing rate of noise events caused by transistor and device mismatch.
+</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
+    They can form a large fraction of the background activity output at fixed positions and they can also be close to a signal.
+</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
+    They have lower threshold values than the assumed value. This means that both positive and negative events are generated
+</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
+    more often than expected.
+</h1>
+
+
+<div class="image-container" style="text-align:center;">
+    <img src="static/images/dvs_hot_pixels_circuit.png" alt="Image ALT TEXT" style="max-width: 70%; height: auto;; margin-top: 40px;">
+    <h1 class="title is-1 publication-title" style="text-align: center; font-size: 12px;">Source: Low Cost and Latency Event Camera Background Activity Denoising, Guo and Delbruck TPAMI'23</h1>
+</div><br>
+
+
+
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Methods to filter hot pixels</h1>
+
+
+
+
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Choose a method</h1>
 
     <div class="methods" style="text-align:center; margin-bottom: 20px;">
@@ -350,7 +383,7 @@
 
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Windy stars output</h2> -->
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Windy stars output</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 35px;">Windy stars output</h1>
 <div class="mainSection">
 
     <div id="one" class="bal-container">
@@ -719,7 +752,7 @@
 </div><br>
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Non-windy stars output</h2> -->
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Non-windy stars output</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 35px;">Non-windy stars output</h1>
 
 <div class="mainSection">
     <div id="sixteen" class="bal-container">
@@ -797,36 +830,56 @@
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 50px;">Quantitative analysis</h2> -->
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Quantitative analysis</h1>
 
+<div class="container2">
+    <div class="image-container2">
+        <h3>Input events with labelled stars</h3>
+        <img src="./static/images/2022-03-29T11-52-56Z_speed_survey_114.825500_5.224993_0.00048828125_all_events.png" alt="Image 1" width="400" height="400">
+    </div>
+    <div class="image-container2">
+        <h3>Only background, no stars</h3>
+        <img src="./static/images/2022-03-29T11-52-56Z_speed_survey_114.825500_5.224993_0.00048828125_background.png" alt="Image 1" width="400" height="400">
+    </div>
+    <div class="image-container2">
+        <h3>Hot pixels ground truth</h3>
+        <img src="./static/images/2022-03-29T11-52-56Z_speed_survey_114.825500_5.224993_0.00048828125_only_hot_pixels.png" alt="Image 1" width="400" height="400">
+    </div>
+    <div class="image-container2">
+        <h3>stars ground truth, detected hot pixels and background</h3>
+        <img src="./static/images/2022-03-29T11-52-56Z_speed_survey_114.825500_5.224993_0.00048828125_coloured.png" alt="Image 1" width="400" height="400">
+    </div>
+    </div>
+    <br>
 
 <div class="container2">
 <div class="image-container2">
     <h3>Sensitivity = TP/(TP+ FN)</h3>
     <h3>Specificity = TN/(TN + FP)</h3>
     <h3>Informedness = Sensitivity + Specificity - 1</h3>
-    <img src="./static/images/hot_pixels_hot_pixels.png" alt="Image 1" width="750" height="750">
+    <img src="./static/images/hot_pixels_hot_pixels.png" alt="Image 1" width="550" height="550">
 </div>
 <div class="image-container2">
     <h3>total_signal = sum(star_gt == 1);</h3>
     <h3>FP = sum((star_gt == 1) & (hotpixels_detected == 1))</h3>
     <h3>Signal Preservation Rate = (1 - FP / total_signal) * 100</h3>
-    <img src="./static/images/signal_preservation_rate.png" alt="Image 1" width="750" height="750">
+    <img src="./static/images/signal_preservation_rate.png" alt="Image 1" width="550" height="550">
 </div>
-<div class="image-container2">
+<!-- <div class="image-container2">
     <h3>TP = sum((star_gt == 0) & (hotpixels_detected == 1) & (hot_pixels_gt == 1))</h3>
     <h3>Background Hot Pixel Removal = (TP / sum(hot_pixels_gt == 1)) * 100</h3>
     <img src="./static/images/background_hot_pixel_rate.png" alt="Image 1" width="750" height="750">
-</div>
+</div> -->
 <div class="image-container2">
-    <h3>Harmonic mean between SPR and BHPRE</h3>
+    <h3>How well it performs in:</h3>
+    <h3>Preserving the signal and removing background hot pixels</h3>
     <h3>Hmean = 2 * (SPR * BHPRE) / (SPR + BHPRE)</h3>
-    <img src="./static/images/harmonic_mean.png" alt="Image 1" width="750" height="750">
+    <img src="./static/images/harmonic_mean.png" alt="Image 1" width="550" height="550">
 </div>
 </div>
 <br>
 
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Hot pixels similarity map analysis</h2> -->
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Hot pixels similarity map analysis</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Hot Pixels Average Map</h1>
 
 <div class="methods" style="text-align:center; margin-bottom: 20px;">
     <button id="timo" onclick="changeHotPixelImages('Timo')">Timo - KnownPix</button>
@@ -841,48 +894,135 @@
 
 
 <div style="text-align: center; margin-bottom: 0px;">
-    <h2>Hot pixels map. It is the average across all the images from the windy recordings over the hot pixels only. This shows the most common hot pixels and their consistency overtime.</h2>
+    <h2>It is the average across multiple recordings from the windy stars over the detected hot pixels only. This shows that the same hot pixels appear in many recordings. If it can be detected earlier than it can be turned for new recordings.</h2>
 </div>
 <div id="hotPixelRow1" class="imageRow"></div>
 <div id="hotPixelRow2" class="imageRow" style="display: flex; justify-content: center; gap: 20px;"></div>
 <br>
 
 
+
+
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Application 1: Astrometry analysis</h2> -->
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Application 1: Astrometry analysis</h1>
 
 
-<div class="container2">
-    <div class="image-container2">
-        <h3>Input</h3>
-        <img src="./static/images/2_warped_image_cmax_full_window_filtered_191.930378_-59.688764_0.00048828125_vx_-0.00000_vy_-0.00000_contrast_1431.41822.png" alt="Image 1" width="450" height="300">
+<!-- <div class="matrix">
+    <div class="matrix-row">
+        <button id="astrometry" onclick="astrometry_analysis('1')">REGULAR_speed_survey_105.756132_-23.833291_0.00048828125</button>
+        <button id="astrometry" onclick="astrometry_analysis('2')">REGULAR_speed_survey_95.987926_-52.69566_0.00048828125</button>
+        <button id="astrometry" onclick="astrometry_analysis('3')">REGULAR_speed_survey_114.8255_5.224993_0.00048828125</button>
     </div>
-    <div class="image-container2">
-        <h3>Detected sources</h3>
-        <img src="./static/images/2_warped_image_cmax_full_window_filtered_191.930378_-59.688764_0.00048828125_vx_-0.00000_vy_-0.00000_contrast_1431.41822.png" alt="Image 1" width="450" height="300">
+    <div class="matrix-row">
+        <button id="astrometry" onclick="astrometry_analysis('4')">REGULAR_speed_survey_191.930378_-59.688764_0.00048828125</button>
+        <button id="astrometry" onclick="astrometry_analysis('5')">REGULAR_speed_survey_125.628542_-59.509483_0.00048828125</button>
+        <button id="astrometry" onclick="astrometry_analysis('6')">REGULAR_speed_survey_182.103152_-24.728782_0.00048828125</button>
     </div>
-    <div class="image-container2">
-        <h3>Associated astrophysical sources</h3>
-        <img src="./static/images/2_warped_image_cmax_full_window_filtered_191.930378_-59.688764_0.00048828125_vx_-0.00000_vy_-0.00000_contrast_1431.41822.png" alt="Image 1" width="450" height="300">
+    <div class="matrix-row">
+        <button id="astrometry" onclick="astrometry_analysis('7')">REGULAR_speed_survey_144.302803_6.835782_0.00048828125</button>
+        <button id="astrometry" onclick="astrometry_analysis('8')">REGULAR_speed_survey_180.175929_-21.837503_0.00048828125</button>
+        <button id="astrometry" onclick="astrometry_analysis('9')">REGULAR_speed_survey_172.310377_-4.451652_0.00048828125</button>
     </div>
-    <div class="image-container2">
-        <h3>Occurences vs pix error</h3>
-        <img src="./static/images/2_warped_image_cmax_full_window_filtered_191.930378_-59.688764_0.00048828125_vx_-0.00000_vy_-0.00000_contrast_1431.41822.png" alt="Image 1"width="450" height="300">
+    <div class="matrix-row">
+        <button id="astrometry" onclick="astrometry_analysis('10')">REGULAR_speed_survey_163.930739_-5.551596_0.00048828125</button>
+        <button id="astrometry" onclick="astrometry_analysis('11')">REGULAR_speed_survey_161.051563_-34.257856_0.00048828125</button>
+        <button id="astrometry" onclick="astrometry_analysis('12')">REGULAR_speed_survey_164.948285_1.078555_0.00048828125</button>
     </div>
-    <div class="image-container2">
-        <h3>Occurences vs mag</h3>
-        <img src="./static/images/2_warped_image_cmax_full_window_filtered_191.930378_-59.688764_0.00048828125_vx_-0.00000_vy_-0.00000_contrast_1431.41822.png" alt="Image 1" width="450" height="300">
+    <div class="matrix-row">
+        <button id="astrometry" onclick="astrometry_analysis('13')">WINDY_speed_survey_191.930378_-59.688764_0.00390625</button>
+        <button id="astrometry" onclick="astrometry_analysis('14')">WINDY_speed_survey_191.930378_-59.688764_0.001953125</button>
+        <button id="astrometry" onclick="astrometry_analysis('15')">WINDY_speed_survey_191.930378_-59.688764_0.0009765625</button>
     </div>
-    <div class="image-container2">
-        <h3>Recall</h3>
-        <img src="./static/images/2_warped_image_cmax_full_window_filtered_191.930378_-59.688764_0.00048828125_vx_-0.00000_vy_-0.00000_contrast_1431.41822.png" alt="Image 1"width="450" height="300">
+    <div class="matrix-row">
+        <button id="astrometry" onclick="astrometry_analysis('16')">WINDY_speed_survey_191.930378_-59.688764_0.00048828125</button>
+        <button id="astrometry" onclick="astrometry_analysis('17')">WINDY_speed_survey_191.930378_-59.688764_0.0001220703125</button>
+        <button id="astrometry" onclick="astrometry_analysis('18')">WINDY_speed_survey_191.930378_-59.688764_6.103515625e-05</button>
+    </div>
+    <div class="matrix-row">
+        <button id="astrometry" onclick="astrometry_analysis('19')">WINDY_speed_survey_191.930378_-59.688764_3.0517578125e-05</button>
+        <button id="astrometry" onclick="astrometry_analysis('20')">WINDY_speed_survey_191.930378_-59.688764_1.52587890625e-05</button>
+        <button id="astrometry" onclick="astrometry_analysis('21')">WINDY_speed_survey_191.930378_-59.688764_7.62939453125e-06</button>
+    </div>
+</div> -->
+
+<!-- first row -->
+<div class="mainSection">
+    <div id="nineteen" class="bal-container">
+        <div class="bal-after">
+                <img src="./static/images/1_warped_image_cmax_full_window_without_hot_pixel_filter_95.987926_-52.69566_0.00048828125_vx_0.00000_vy_-0.00000_contrast_1785.55345.png">
+            <div class="bal-afterPosition afterLabel">
+                After
+            </div>
+        </div>
+
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/1_warped_image_cmax_full_window_without_hot_pixel_filter_95.987926_-52.69566_0.00048828125_vx_0.00000_vy_-0.00000_contrast_1785.55345.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+
+    <div id="twente" class="bal-container">
+        <div class="bal-after">
+            <img src="./static/images/2_warped_image_cmax_full_window_with_hot_pixel_filter_filtered_95.987926_-52.69566_0.00048828125_vx_0.00000_vy_-0.00000_contrast_1779.66221.png">
+            <div class="bal-afterPosition afterLabel">
+                After
+            </div>
+        </div>
+
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/2_warped_image_cmax_full_window_without_hot_pixel_filter_filtered_95.987926_-52.69566_0.00048828125_vx_0.00000_vy_-0.00000_contrast_1785.55345.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+
+    <div id="twenteone" class="bal-container">
+        <div class="bal-after">
+            <img src="./static/images/7_astro_matched_from_gaia_labelled_cmax_full_window_with_hot_pixel_filter.png">
+            <div class="bal-afterPosition afterLabel">
+                After
+            </div>
+        </div>
+
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/7_astro_matched_from_gaia_labelled_cmax_full_window_without_hot_pixel_filter.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
     </div>
 </div><br>
 
 
-<!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Application 2: Event-based Autofocus</h2> -->
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Application 2: Event-based Autofocus</h1>
 
+
+
+<!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Application 2: Event-based Autofocus</h2> -->
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Application 2: Event-based Stars Autofocus</h1>
 
 
 
@@ -959,6 +1099,17 @@
   new BeforeAfter({
       id: '#eighteen'
   });
+  new BeforeAfter({
+      id: '#nineteen'
+  });
+  new BeforeAfter({
+      id: '#twente'
+  });
+  new BeforeAfter({
+      id: '#twenteone'
+  });
+
+
 
   let lastMethodName = ''; // Store the last selected method name
   let showingHotPixels = false; // Track whether we're showing hot pixels
@@ -1176,6 +1327,8 @@
           img.src = newImageSource;
       });
   }
+
+
 
   window.onload = function() {
       changeHotPixelImages('Alex2');
