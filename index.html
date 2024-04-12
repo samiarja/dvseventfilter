@@ -57,7 +57,7 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Sami Arja</a><sup>*</sup></span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Sami Arja</a><sup>*</sup>, TBD</span>
                 <!-- <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
                   <span class="author-block">
@@ -182,11 +182,77 @@
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 44px;">Choose a method</h2> -->
 
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">The timeline of a hot pixel varies</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">How does a hot pixel look like?</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">Hot pixels exhibit linear timeline which can be continuous or discontinuous</h1>
+<div class="container2">
+    <div class="image-container2">
+        <h3>Long term</h3>
+        <img src="./static/images/hotpix_at_157.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <h3>Randomly firing</h3>
+        <img src="./static/images/hotpix_at_259.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <h3>Firing less often</h3>
+        <img src="./static/images/hotpix_at_602.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <h3>Short term</h3>
+        <img src="./static/images/hotpix_at_818.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <h3>Low freq. firing</h3>
+        <img src="./static/images/hotpix_at_1355.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <h3>High freq. firing</h3>
+        <img src="./static/images/hotpix_at_1675.png" alt="Image 1" width="200" height="200">
+    </div>
+
+    </div>
+    <br>
+</div>
 
 
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">Below are pixels triggered by a signal (i.e. stars)</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">Even though they fire less often, they can also have a linear timeline similar to a hot pixel</h1>
 
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">What cause them to appear?</h1>
+<div class="container2">
+    <div class="image-container2">
+        <!-- <h3>Input events with labelled stars</h3> -->
+        <img src="./static/images/hotpix_at_155.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <!-- <h3>Background events</h3> -->
+        <img src="./static/images/hotpix_at_244.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <!-- <h3>Hot pixels ground truth (Red only)</h3> -->
+        <img src="./static/images/hotpix_at_302.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <!-- <h3>Stars ground truth, detected hot pixels and background</h3> -->
+        <img src="./static/images/hotpix_at_505.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <!-- <h3>Input events with labelled stars</h3> -->
+        <img src="./static/images/hotpix_at_442.png" alt="Image 1" width="200" height="200">
+    </div>
+    <div class="image-container2">
+        <!-- <h3>Background events</h3> -->
+        <img src="./static/images/hotpix_at_403.png" alt="Image 1" width="200" height="200">
+    </div>
+
+    </div>
+    <br>
+</div>
+
+
+<!-- <h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">The question is: how do we filter out hot pixels and preserve the pixels with the meaningful signal?</h1> -->
+
+
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">What cause a hot pixel?</h1>
 
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
     Hot pixels have an abnormally high firing rate of noise events caused by transistor and device mismatch.
@@ -209,12 +275,82 @@
 
 
 
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Methods to filter hot pixels</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Characteristics of each method used</h1>
+
+<div class="image-container" style="text-align:center;">
+    <img src="static/images/characteritics_filter_methods.png" alt="Image ALT TEXT" style="max-width: 60%; height: auto;; margin-top: 40px;">
+</div><br>
+
+<table>
+    <tr>
+        <th>Algorithm</th>
+        <th># Parameters</th>
+        <th>Handles Noise?</th>
+        <th>Hot Pixel Type</th>
+        <th>Knowledge about hot pixels?</th>
+        <th>Processing type</th>
+    </tr>
+    <tr>
+        <td>Timo - KnownPix</td>
+        <td>1</td>
+        <td>Only hot pixels</td>
+        <td>Long term hot pixels</td>
+        <td>Yes</td>
+        <td>Entire image</td>
+    </tr>
+    <!-- Repeat the row structure for a total of 7 more rows -->
+    <tr>
+        <td>Cedric - AvgMap</td>
+        <td>2</td>
+        <td>Only hot pixels</td>
+        <td>Long term hot pixels</td>
+        <td>Yes</td>
+        <td>Entire image</td>
+    </tr>
+    <tr>
+        <td>Alex - 99Percentile</td>
+        <td>1</td>
+        <td>Only hot pixels</td>
+        <td>Long term hot pixels</td>
+        <td>No</td>
+        <td>Entire image</td>
+    </tr>
+    <tr>
+        <td>Alex - NeighborPix</td>
+        <td>0</td>
+        <td>Hot pixels and noise</td>
+        <td>Any hot pixels (Short/long term)</td>
+        <td>No</td>
+        <td>ROI</td>
+    </tr>
+    <tr>
+        <td>Saeed - LinearPix</td>
+        <td>2</td>
+        <td>Hot pixels and noise</td>
+        <td>Long term hot pixels</td>
+        <td>No</td>
+        <td>Entire image</td>
+    </tr>
+    <tr>
+        <td>Saeed - NeighborPix</td>
+        <td>1</td>
+        <td>Hot pixels and noise</td>
+        <td>Long term hot pixels</td>
+        <td>No</td>
+        <td>ROI</td>
+    </tr>
+    <tr>
+        <td>Sami - NeighborPix</td>
+        <td>1</td>
+        <td>Hot pixels and noise</td>
+        <td>Any hot pixels (Short/long term)</td>
+        <td>No</td>
+        <td>ROI</td>
+    </tr>
+</table><br>
 
 
-
-
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Choose a method</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Select a method and see its output below</h1>
 
     <div class="methods" style="text-align:center; margin-bottom: 20px;">
         <button id="timo" onclick="changeImage('Timo')">Timo - KnownPix</button>
@@ -829,26 +965,28 @@
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 50px;">Quantitative analysis</h2> -->
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Quantitative analysis</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 30px;">How well the algorithm can preserves the signal and filter background hot pixels?</h1>
 
 <div class="container2">
     <div class="image-container2">
         <h3>Input events with labelled stars</h3>
-        <img src="./static/images/2022-03-29T11-52-56Z_speed_survey_114.825500_5.224993_0.00048828125_all_events.png" alt="Image 1" width="400" height="400">
+        <img src="./static/images/2022-03-29T11-48-04Z_speed_survey_95.987926_-52.695660_0.00048828125_all_events.png" alt="Image 1" width="435" height="435">
     </div>
     <div class="image-container2">
-        <h3>Only background, no stars</h3>
-        <img src="./static/images/2022-03-29T11-52-56Z_speed_survey_114.825500_5.224993_0.00048828125_background.png" alt="Image 1" width="400" height="400">
+        <h3>Background events</h3>
+        <img src="./static/images/2022-03-29T11-48-04Z_speed_survey_95.987926_-52.695660_0.00048828125_background.png" alt="Image 1" width="435" height="435">
     </div>
     <div class="image-container2">
-        <h3>Hot pixels ground truth</h3>
-        <img src="./static/images/2022-03-29T11-52-56Z_speed_survey_114.825500_5.224993_0.00048828125_only_hot_pixels.png" alt="Image 1" width="400" height="400">
+        <h3>Hot pixels ground truth (Red only)</h3>
+        <img src="./static/images/2022-03-29T11-48-04Z_speed_survey_95.987926_-52.695660_0.00048828125_only_hot_pixels.png" alt="Image 1" width="435" height="435">
     </div>
     <div class="image-container2">
-        <h3>stars ground truth, detected hot pixels and background</h3>
-        <img src="./static/images/2022-03-29T11-52-56Z_speed_survey_114.825500_5.224993_0.00048828125_coloured.png" alt="Image 1" width="400" height="400">
+        <h3>Stars ground truth, detected hot pixels and background</h3>
+        <img src="./static/images/2022-03-29T11-48-04Z_speed_survey_95.987926_-52.695660_0.00048828125_coloured.png" alt="Image 1" width="435" height="435">
     </div>
     </div>
     <br>
+</div>
 
 <div class="container2">
 <div class="image-container2">
@@ -886,7 +1024,7 @@
     <button id="cedric" onclick="changeHotPixelImages('Cedric')">Cedric - AvgMap</button>
     <button id="alex1" onclick="changeHotPixelImages('Alex1')">Alex - 99Percentile</button>
     <button id="alex2" onclick="changeHotPixelImages('Alex2')">Alex - NeighborPix</button>
-    <button id="saeed" onclick="changeHotPixelImages('Saeed')">Saeed 1</button>
+    <button id="saeed" onclick="changeHotPixelImages('Saeed')">Saeed - LinearPix</button>
     <button id="saeed2" onclick="changeHotPixelImages('Saeed2')">Saeed - NeighborPix</button>
     <button id="sami" onclick="changeHotPixelImages('Ours')">Sami - NeighborPix</button>
 </div>

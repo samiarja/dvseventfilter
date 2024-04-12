@@ -555,3 +555,18 @@ body {
 }
 
 
+table {
+  width: 62%;
+  margin: auto; /* Centers the table horizontally */
+  border-collapse: collapse; /* Removes the space between borders */
+}
+th, td {
+  padding: 12px;
+  text-align: center; /* Horizontally centers text */
+  vertical-align: middle; /* Vertically centers text */
+  border: 2px solid #000000;
+}
+th {
+  background-color: #ffffff;
+  color: white;
+}
