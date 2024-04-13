@@ -1,4 +1,4 @@
-# A General Solution to Information Removal for Event Cameras
+# A General-Purpose Algorithm for Hot Pixel and Background Noise Removal for Neuromorphic Space Imaging
 
 
 <p align="center" width="100%">
