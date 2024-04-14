@@ -215,8 +215,7 @@
 </div>
 
 
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">Below are pixels triggered by a signal (i.e. stars)</h1>
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">Even though they fire less often, they can also have a linear timeline similar to a hot pixel</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">Pixels triggered by a signal (i.e. stars) fire less often, but can also have a linear timeline similar to a hot pixel</h1>
 
 <div class="container2">
     <div class="image-container2">
@@ -290,7 +289,7 @@
         <th>Handles Noise?</th>
         <th>Hot Pixel Type</th>
         <th>Knowledge about hot pixels?</th>
-        <th>Processing type</th>
+        <th>Input</th>
     </tr>
     <tr>
         <td>Timo - KnownPix</td>
@@ -352,7 +351,7 @@
 </table><br>
 
 
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Select a method and see its output below</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Select a method to inspect output</h1>
 
     <div class="methods" style="text-align:center; margin-bottom: 20px;">
         <button id="timo" onclick="changeImage('Timo')">Timo - KnownPix</button>
@@ -1915,7 +1914,7 @@
 
 
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Quantitative analysis</h1>
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 30px;">How well the algorithm can preserves the signal and filter background hot pixels?</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">How well a hot pixel filter can preserve the signal and how much it can filter background hot pixels?</h1>
 
 <div class="container2">
     <div class="image-container2">
@@ -1986,6 +1985,8 @@
 <div style="text-align: center; margin-bottom: 0px;">
     <h2>It is the average across multiple recordings from the windy stars over the detected hot pixels only. This shows that the same hot pixels appear in many recordings. If it can be detected earlier than it can be turned for new recordings.</h2>
 </div>
+
+
 <div id="hotPixelRow1" class="imageRow"></div>
 <div id="hotPixelRow2" class="imageRow" style="display: flex; justify-content: center; gap: 20px;"></div>
 <br>
