@@ -1922,44 +1922,47 @@
         <img src="./static/images/2022-03-29T11-48-04Z_speed_survey_95.987926_-52.695660_0.00048828125_all_events.png" alt="Image 1" width="435" height="435">
     </div>
     <div class="image-container2">
-        <h3>Background events</h3>
+        <h3>Background events (star_gt == 0)</h3>
         <img src="./static/images/2022-03-29T11-48-04Z_speed_survey_95.987926_-52.695660_0.00048828125_background.png" alt="Image 1" width="435" height="435">
     </div>
     <div class="image-container2">
-        <h3>Hot pixels ground truth (Red only)</h3>
+        <h3>Labelled hot pixels ((star_gt == 0) & (hot_pixels_gt == 1))</h3>
         <img src="./static/images/2022-03-29T11-48-04Z_speed_survey_95.987926_-52.695660_0.00048828125_only_hot_pixels.png" alt="Image 1" width="435" height="435">
     </div>
     <div class="image-container2">
-        <h3>Stars ground truth, detected hot pixels and background</h3>
+        <h3>Segmenting labelled stars and detected hot pixels</h3>
         <img src="./static/images/2022-03-29T11-48-04Z_speed_survey_95.987926_-52.695660_0.00048828125_coloured.png" alt="Image 1" width="435" height="435">
     </div>
     </div>
     <br>
 </div>
 
+
+
 <div class="container2">
-<div class="image-container2">
+<!-- <div class="image-container2">
     <h3>Sensitivity = TP/(TP+ FN)</h3>
     <h3>Specificity = TN/(TN + FP)</h3>
     <h3>Informedness = Sensitivity + Specificity - 1</h3>
     <img src="./static/images/hot_pixels_hot_pixels.png" alt="Image 1" width="550" height="550">
-</div>
+</div> -->
 <div class="image-container2">
     <h3>total_signal = sum(star_gt == 1);</h3>
     <h3>FP = sum((star_gt == 1) & (hotpixels_detected == 1))</h3>
     <h3>Signal Preservation Rate = (1 - FP / total_signal) * 100</h3>
-    <img src="./static/images/signal_preservation_rate.png" alt="Image 1" width="550" height="550">
+    <img src="./static/images/SPR_191.930378_-59.688764.png" alt="Image 1" width="550" height="550">
 </div>
-<!-- <div class="image-container2">
+<div class="image-container2">
+    <h3>How well it removes hot pixels from background</h3>
     <h3>TP = sum((star_gt == 0) & (hotpixels_detected == 1) & (hot_pixels_gt == 1))</h3>
     <h3>Background Hot Pixel Removal = (TP / sum(hot_pixels_gt == 1)) * 100</h3>
-    <img src="./static/images/background_hot_pixel_rate.png" alt="Image 1" width="750" height="750">
-</div> -->
+    <img src="./static/images/BHPRE_191.930378_-59.688764.png" alt="Image 1" width="550" height="550">
+</div>
 <div class="image-container2">
     <h3>How well it performs in:</h3>
     <h3>Preserving the signal and removing background hot pixels</h3>
     <h3>Hmean = 2 * (SPR * BHPRE) / (SPR + BHPRE)</h3>
-    <img src="./static/images/harmonic_mean.png" alt="Image 1" width="550" height="550">
+    <img src="./static/images/HMean_191.930378_-59.688764.png" alt="Image 1" width="550" height="550">
 </div>
 </div>
 <br>
@@ -1990,6 +1993,12 @@
 <div id="hotPixelRow1" class="imageRow"></div>
 <div id="hotPixelRow2" class="imageRow" style="display: flex; justify-content: center; gap: 20px;"></div>
 <br>
+
+
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Qualitative Performance on other datasets</h1>
+
+
+
 
 
 
