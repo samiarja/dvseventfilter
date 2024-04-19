@@ -363,9 +363,9 @@
         <button id="sami" onclick="changeImage('Ours')">Sami - NeighborPix</button>
     </div>
 
-    <div class="show-hot-pixels" style="text-align:center; margin-bottom: 20px;">
+    <!-- <div class="show-hot-pixels" style="text-align:center; margin-bottom: 20px;">
       <button id="show-hot-pixels" onclick="showHotPixels()">Show detected hot pixels</button>
-  </div>
+  </div> -->
 
 
   <!-- <div style="display: flex; justify-content: center; align-items: start;">
@@ -1131,6 +1131,8 @@
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Application 1: Astrometry analysis</h2> -->
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Application 1: Star Imaging with Astrometry</h1><br>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 20px;">Using the best performing algorithm (Alex - NeighborPix)</h1><br>
+
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 20px;">Motion compensated image&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Source detection&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Astrometry&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Magnitude histogram</h1>
 
 <!-- first row -->
@@ -1619,6 +1621,8 @@
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Application 2: Event-based Autofocus</h2> -->
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Application 2: Event-based Stars Autofocus</h1><br>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 20px;">Using the best performing algorithm (Alex - NeighborPix)</h1><br>
+
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 20px;">mag12: before filtering hot pixels&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;mag12: after filtering hot pixels&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;mag11: before filtering hot pixels&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;mag11: after filtering hot pixels</h1>
 
 
@@ -1995,11 +1999,193 @@
 <br>
 
 
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Qualitative Performance on other datasets</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Qualitative analysis on other sparse datasets</h1>
+
+
+<div class="methods" style="text-align:center; margin-bottom: 20px;">
+    <button id="timo" onclick="changeHotPixelImages_new_data('Timo')">Timo - KnownPix</button>
+    <button id="cedric" onclick="changeHotPixelImages_new_data('Cedric')">Cedric - AvgMap</button>
+    <button id="alex1" onclick="changeHotPixelImages_new_data('Alex1')">Alex - 99Percentile</button>
+    <button id="alex2" onclick="changeHotPixelImages_new_data('Alex2')">Alex - NeighborPix</button>
+    <button id="saeed" onclick="changeHotPixelImages_new_data('Saeed')">Saeed - LinearPix</button>
+    <button id="saeed2" onclick="changeHotPixelImages_new_data('Saeed2')">Saeed - NeighborPix</button>
+    <button id="sami" onclick="changeHotPixelImages_new_data('Ours')">Sami - NeighborPix</button>
+</div>
 
 
 
+<div class="mainSection">
+    <div id="fortynine" class="bal-container">
+        <div class="bal-after">
+            <img class="data-driven-after" data-index="0" src="./static/images/initial_image.png">
+            <div class="bal-afterPosition afterLabel">After</div>
+        </div>
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/DAViS240-2014-10-09T12-16-43+0200-0 car 2_noise_hp_added_before.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
 
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+
+    <div id="fifty" class="bal-container">
+        <div class="bal-after">
+            <img class="data-driven-after" data-index="1" src="./static/images/initial_image.png">
+            <div class="bal-afterPosition afterLabel">After</div>
+        </div>
+
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/accelerating-dot-2-pixels_noise_hp_added_before.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+
+    <div id="fiftyone" class="bal-container">
+        <div class="bal-after">
+            <img class="data-driven-after" data-index="2" src="./static/images/initial_image.png">
+            <div class="bal-afterPosition afterLabel">After</div>
+        </div>
+
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/moving_5_dots_noise_hp_added_before.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+
+    <div id="fiftytwo" class="bal-container">
+        <div class="bal-after">
+            <img class="data-driven-after" data-index="3" src="./static/images/initial_image.png">
+            <div class="bal-afterPosition afterLabel">After</div>
+        </div>
+
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/v2e-test-white-dot-clean_noise_hp_added_before.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+</div>
+
+
+<!-- Second row -->
+<div class="mainSection">
+    <div id="fiftythree" class="bal-container">
+        <div class="bal-after">
+            <img class="data-driven-after" data-index="4" src="./static/images/initial_image.png">
+            <div class="bal-afterPosition afterLabel">After</div>
+        </div>
+        
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/recording_alex_3_noise_hp_added_before.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+
+    <div id="fiftyfour" class="bal-container">
+        <div class="bal-after">
+            <img class="data-driven-after" data-index="5" src="./static/images/initial_image.png">
+            <div class="bal-afterPosition afterLabel">After</div>
+        </div>
+
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/recording_auto_5_noise_hp_added_before.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+
+    <div id="fiftyfive" class="bal-container">
+        <div class="bal-after">
+            <img class="data-driven-after" data-index="6" src="./static/images/initial_image.png">
+            <div class="bal-afterPosition afterLabel">After</div>
+        </div>
+
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/recording_greg_target_2_noise_hp_added_before.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+
+    <div id="fiftysix" class="bal-container">
+        <div class="bal-after">
+            <img class="data-driven-after" data-index="7" src="./static/images/initial_image.png">
+            <div class="bal-afterPosition afterLabel">After</div>
+        </div>
+
+        <div class="bal-before">
+            <div class="bal-before-inset">
+                <img src="./static/images/recording_yesh_2_noise_hp_added_before.png">
+                <div class="bal-beforePosition beforeLabel">
+                    Before
+                </div>
+            </div>
+        </div>
+
+        <div class="bal-handle">
+            <span class=" handle-left-arrow"></span>
+            <span class="handle-right-arrow"></span>
+        </div>
+    </div>
+</div><br>
 
 
 
@@ -2163,30 +2349,30 @@
   new BeforeAfter({
       id: '#fortyeight'
   });
-//   new BeforeAfter({
-//       id: '#fourtynine'
-//   });
-//   new BeforeAfter({
-//       id: '#fifty'
-//   });
-//   new BeforeAfter({
-//       id: '#fiftyone'
-//   });
-//   new BeforeAfter({
-//       id: '#fiftytwo'
-//   });
-//   new BeforeAfter({
-//       id: '#fiftythree'
-//   });
-//   new BeforeAfter({
-//       id: '#fiftyfour'
-//   });
-//   new BeforeAfter({
-//       id: '#fiftyfive'
-//   });
-//   new BeforeAfter({
-//       id: '#fiftysix'
-//   });
+  new BeforeAfter({
+      id: '#fortynine'
+  });
+  new BeforeAfter({
+      id: '#fifty'
+  });
+  new BeforeAfter({
+      id: '#fiftyone'
+  });
+  new BeforeAfter({
+      id: '#fiftytwo'
+  });
+  new BeforeAfter({
+      id: '#fiftythree'
+  });
+  new BeforeAfter({
+      id: '#fiftyfour'
+  });
+  new BeforeAfter({
+      id: '#fiftyfive'
+  });
+  new BeforeAfter({
+      id: '#fiftysix'
+  });
 //   new BeforeAfter({
 //       id: '#fiftyseven'
 //   });
@@ -2264,6 +2450,7 @@
     
     document.getElementById('show-hot-pixels').classList.remove('active-button');
 }
+
 
 
   // The showHotPixels and updateImages functions can remain the same, assuming they correctly handle the showing and hiding of hot pixels based on the lastMethodName and showingHotPixels state.
@@ -2361,6 +2548,7 @@
       },
   };
 
+  
 
   function changeHotPixelImages(methodName) {
       const baseImagePath = './static/images/';
@@ -2408,6 +2596,8 @@
   }
 
 
+
+
   
   function updateImages(methodName, hotPixels) {
       const baseImagePath = './static/images/';
@@ -2429,12 +2619,127 @@
   }
 
 
+  function changeHotPixelImages_new_data(methodName) {
+    const baseImagePath = './static/images/';
+    
+    // Map of method names to arrays of specific image files
+    const imageMap = {
+        'Alex1': [
+            'DAViS240-2014-10-09T12-16-43+0200-0 car 2_noise_hp_added_after_alex1.png',
+            'accelerating-dot-2-pixels_noise_hp_added_after_alex1.png',
+            'moving_5_dots_noise_hp_added_after_alex1.png',
+            'v2e-test-white-dot-clean_noise_hp_added_after_alex1.png',
+            'recording_alex_3_noise_hp_added_after_alex1.png',
+            'recording_auto_5_noise_hp_added_after_alex1.png',
+            'recording_greg_target_2_noise_hp_added_after_alex1.png',
+            'recording_yesh_2_noise_hp_added_after_alex1.png',
+        ],
+        'Alex2': [
+            'DAViS240-2014-10-09T12-16-43+0200-0 car 2_noise_hp_added_after_alex2.png',
+            'accelerating-dot-2-pixels_noise_hp_added_after_alex2.png',
+            'moving_5_dots_noise_hp_added_after_alex2.png',
+            'v2e-test-white-dot-clean_noise_hp_added_after_alex2.png',
+            'recording_alex_3_noise_hp_added_after_alex2.png',
+            'recording_auto_5_noise_hp_added_after_alex2.png',
+            'recording_greg_target_2_noise_hp_added_after_alex2.png',
+            'recording_yesh_2_noise_hp_added_after_alex2.png',
+        ],
+        'Cedric': [
+            'DAViS240-2014-10-09T12-16-43+0200-0 car 2_noise_hp_added_after_cedric.png',
+            'accelerating-dot-2-pixels_noise_hp_added_after_cedric.png',
+            'moving_5_dots_noise_hp_added_after_cedric.png',
+            'v2e-test-white-dot-clean_noise_hp_added_after_cedric.png',
+            'recording_alex_3_noise_hp_added_after_cedric.png',
+            'recording_auto_5_noise_hp_added_after_cedric.png',
+            'recording_greg_target_2_noise_hp_added_after_cedric.png',
+            'recording_yesh_2_noise_hp_added_after_cedric.png',
+        ],
+        'Timo': [
+            'DAViS240-2014-10-09T12-16-43+0200-0 car 2_noise_hp_added_after_timo.png',
+            'accelerating-dot-2-pixels_noise_hp_added_after_timo.png',
+            'moving_5_dots_noise_hp_added_after_timo.png',
+            'v2e-test-white-dot-clean_noise_hp_added_after_timo.png',
+            'recording_alex_3_noise_hp_added_after_timo.png',
+            'recording_auto_5_noise_hp_added_after_timo.png',
+            'recording_greg_target_2_noise_hp_added_after_timo.png',
+            'recording_yesh_2_noise_hp_added_after_timo.png',
+        ],
+        'Saeed': [
+            'DAViS240-2014-10-09T12-16-43+0200-0 car 2_noise_hp_added_after_saeed.png',
+            'accelerating-dot-2-pixels_noise_hp_added_after_saeed.png',
+            'moving_5_dots_noise_hp_added_after_saeed.png',
+            'v2e-test-white-dot-clean_noise_hp_added_after_saeed.png',
+            'recording_alex_3_noise_hp_added_after_saeed.png',
+            'recording_auto_5_noise_hp_added_after_saeed.png',
+            'recording_greg_target_2_noise_hp_added_after_saeed.png',
+            'recording_yesh_2_noise_hp_added_after_saeed.png',
+        ],
+        'Saeed2': [
+            'DAViS240-2014-10-09T12-16-43+0200-0 car 2_noise_hp_added_after_saeed2.png',
+            'accelerating-dot-2-pixels_noise_hp_added_after_saeed2.png',
+            'moving_5_dots_noise_hp_added_after_saeed2.png',
+            'v2e-test-white-dot-clean_noise_hp_added_after_saeed2.png',
+            'recording_alex_3_noise_hp_added_after_saeed2.png',
+            'recording_auto_5_noise_hp_added_after_saeed2.png',
+            'recording_greg_target_2_noise_hp_added_after_saeed2.png',
+            'recording_yesh_2_noise_hp_added_after_saeed2.png',
+        ],
+        'Ours': [
+            'DAViS240-2014-10-09T12-16-43+0200-0 car 2_noise_hp_added_after_ours.png',
+            'accelerating-dot-2-pixels_noise_hp_added_after_ours.png',
+            'moving_5_dots_noise_hp_added_after_ours.png',
+            'v2e-test-white-dot-clean_noise_hp_added_after_ours.png',
+            'recording_alex_3_noise_hp_added_after_ours.png',
+            'recording_auto_5_noise_hp_added_after_ours.png',
+            'recording_greg_target_2_noise_hp_added_after_ours.png',
+            'recording_yesh_2_noise_hp_added_after_ours.png',
+        ],
+    };
 
-  window.onload = function() {
-      changeHotPixelImages('Alex2');
-      changeImage('Alex2');
-      
-  };
+    // Find all images that need to be updated by their unique data attribute
+    Object.entries(imageMap[methodName] || []).forEach(([index, imageName], i) => {
+        const img = document.querySelector(`.data-driven-after[data-index="${i}"]`);
+        if (img) {
+            const newAfterImageSrc = `${baseImagePath}${imageName}`;
+            img.src = newAfterImageSrc;
+            img.alt = "After Image - " + methodName;
+
+            // Debug: Log the new source path to ensure it's correctly set
+            console.log("New src set to:", newAfterImageSrc);
+        }
+    });
+}
+
+
+
+
+
+
+//   function changeHotPixelImages_new_data(methodName) {
+//     const baseImagePath = './static/images/';
+//     const allAfterImages = document.querySelectorAll('.bal-after img'); // Select all 'after' images
+
+//     allAfterImages.forEach(img => {
+//         // Construct the new image filename based on the method name
+//         const newAfterImageSrc = `${baseImagePath}DAViS240-2014-10-09T12-16-43+0200-0 car 2_after_${methodName.toLowerCase()}.png`;
+//         img.src = newAfterImageSrc; // Update the source of the 'after' image
+//         img.alt = "After Image - " + methodName; // Update the alt text for accessibility
+//     });
+//     }
+
+//     // Automatically load the image for "Alex2" when the page loads
+//     // document.addEventListener('DOMContentLoaded', () => {
+//     //     changeHotPixelImages_new_data('Alex2');
+//     // });
+
+
+
+window.onload = function() {
+    changeHotPixelImages_new_data('Alex2'); // Your new function for updating specific images
+    changeHotPixelImages('Alex2'); // Existing function for other images
+    changeImage('Alex2'); // Another existing function
+};
+
 
   
 </script>
