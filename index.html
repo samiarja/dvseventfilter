@@ -182,6 +182,34 @@
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 44px;">Choose a method</h2> -->
 
+
+
+
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">What cause a hot pixel?</h1>
+
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
+    Hot pixels have an abnormally high firing rate of noise events caused by transistor and device mismatch.
+</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
+    They can form a large fraction of the background activity output at fixed positions and they can also be close to a signal.
+</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
+    They have lower threshold values than the assumed value. This means that both positive and negative events are generated
+</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
+    more often than expected.
+</h1>
+
+
+<div class="image-container" style="text-align:center;">
+    <img src="static/images/dvs_hot_pixels_circuit.png" alt="Image ALT TEXT" style="max-width: 70%; height: auto;; margin-top: 40px;">
+    <h1 class="title is-1 publication-title" style="text-align: center; font-size: 13px;">Source: Low Cost and Latency Event Camera Background Activity Denoising, Guo and Delbruck TPAMI'23</h1>
+</div><br>
+
+
+
+
+
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">How does a hot pixel look like?</h1>
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">Hot pixels exhibit linear timeline which can be continuous or discontinuous</h1>
 <div class="container2">
@@ -251,31 +279,7 @@
 <!-- <h1 class="title is-1 publication-title" style="text-align: center; font-size: 25px;">The question is: how do we filter out hot pixels and preserve the pixels with the meaningful signal?</h1> -->
 
 
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">What cause a hot pixel?</h1>
-
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
-    Hot pixels have an abnormally high firing rate of noise events caused by transistor and device mismatch.
-</h1>
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
-    They can form a large fraction of the background activity output at fixed positions and they can also be close to a signal.
-</h1>
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
-    They have lower threshold values than the assumed value. This means that both positive and negative events are generated
-</h1>
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px; margin-top: 0; margin-bottom: 0;">
-    more often than expected.
-</h1>
-
-
-<div class="image-container" style="text-align:center;">
-    <img src="static/images/dvs_hot_pixels_circuit.png" alt="Image ALT TEXT" style="max-width: 70%; height: auto;; margin-top: 40px;">
-    <h1 class="title is-1 publication-title" style="text-align: center; font-size: 12px;">Source: Low Cost and Latency Event Camera Background Activity Denoising, Guo and Delbruck TPAMI'23</h1>
-</div><br>
-
-
-
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Characteristics of each method used</h1>
-
 
 
 <table>
@@ -288,16 +292,16 @@
         <th>Input</th>
     </tr>
     <tr>
-        <td>Timo - KnownPix</td>
+        <td>Timo: Top N hot pixels</td>
         <td>1</td>
         <td>Only hot pixels</td>
         <td>Long term hot pixels</td>
         <td>Yes</td>
         <td>Entire image</td>
     </tr>
-    <!-- Repeat the row structure for a total of 7 more rows -->
+
     <tr>
-        <td>Cedric - AvgMap</td>
+        <td>Cedric: Standard Deviation Threshold-Based</td>
         <td>2</td>
         <td>Only hot pixels</td>
         <td>Long term hot pixels</td>
@@ -305,7 +309,7 @@
         <td>Entire image</td>
     </tr>
     <tr>
-        <td>Alex - 99Percentile</td>
+        <td>Alex: Percentile-Based</td>
         <td>1</td>
         <td>Only hot pixels</td>
         <td>Long term hot pixels</td>
@@ -313,32 +317,32 @@
         <td>Entire image</td>
     </tr>
     <tr>
-        <td>Alex - NeighborPix</td>
-        <td>0</td>
+        <td>Alex: Neighbor Convolution</td>
+        <td>1</td>
         <td>Hot pixels and noise</td>
         <td>Any hot pixels (Short/long term)</td>
         <td>No</td>
         <td>ROI</td>
     </tr>
     <tr>
-        <td>Saeed - LinearPix</td>
-        <td>2</td>
+        <td>Saeed: Pixel Timeline Uniformity</td>
+        <td>1</td>
         <td>Hot pixels and noise</td>
         <td>Long term hot pixels</td>
         <td>No</td>
         <td>Entire image</td>
     </tr>
     <tr>
-        <td>Saeed - NeighborPix</td>
-        <td>1</td>
+        <td>Saeed: Sliding Window and Uniform Timeline</td>
+        <td>2</td>
         <td>Hot pixels and noise</td>
         <td>Long term hot pixels</td>
         <td>No</td>
         <td>ROI</td>
     </tr>
     <tr>
-        <td>Sami - NeighborPix</td>
-        <td>0</td>
+        <td>Sami: Pixel Uniformity and Cross Correlation</td>
+        <td>1</td>
         <td>Hot pixels and noise</td>
         <td>Any hot pixels (Short/long term)</td>
         <td>No</td>
@@ -346,13 +350,13 @@
     </tr>
 </table><br>
 
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px;">Red events are detected hot pixels, Blue events are signals (i.e. stars)</h1>
+<!-- <h1 class="title is-1 publication-title" style="text-align: center; font-size: 15px;">Red events are detected hot pixels, Blue events are signals (i.e. stars)</h1>
 
 <div class="image-container" style="text-align:center;">
     <img src="static/images/characteritics_filter_methods.png" alt="Image ALT TEXT" style="max-width: 60%; height: auto;; margin-top: 40px;">
-</div><br>
+</div><br> -->
 
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Select a method to inspect output</h1>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Select a method</h1>
 
     <div class="methods" style="text-align:center; margin-bottom: 20px;">
         <button id="timo" onclick="changeImage('Timo')">Timo - KnownPix</button>
@@ -364,9 +368,9 @@
         <button id="sami" onclick="changeImage('Ours')">Sami - NeighborPix</button>
     </div>
 
-    <!-- <div class="show-hot-pixels" style="text-align:center; margin-bottom: 20px;">
+    <div class="show-hot-pixels" style="text-align:center; margin-bottom: 20px;">
       <button id="show-hot-pixels" onclick="showHotPixels()">Show detected hot pixels</button>
-  </div> -->
+    </div>
 
 
   <!-- <div style="display: flex; justify-content: center; align-items: start;">
@@ -1132,7 +1136,7 @@
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Application 1: Astrometry analysis</h2> -->
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Application 1: Star Imaging with Astrometry</h1><br>
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 30px;">Using the best performing algorithm (Alex - NeighborPix)</h1><br>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 30px;">Using the best performing algorithm (Alex: Neighbor Convolution)</h1><br>
 
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 20px;">Motion compensated image&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Source detection&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Astrometry&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Magnitude histogram</h1>
 
@@ -1621,8 +1625,13 @@
 
 
 <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 54px;">Application 2: Event-based Autofocus</h2> -->
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Application 2: Event-based Stars Autofocus</h1><br>
-<h1 class="title is-1 publication-title" style="text-align: center; font-size: 30px;">Using the best performing algorithm (Alex - NeighborPix)</h1><br>
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 50px;">Application 2: Event-based Stars Autofocus</h1>
+<div class="image-container" style="text-align:center;">
+    <img src="static/images/autofocus.png" alt="Image ALT TEXT" style="max-width: 70%; height: auto;; margin-top: 40px;">
+    <h1 class="title is-1 publication-title" style="text-align: center; font-size: 22px;">Source: Autofocus for Event Cameras, Lin et al. CVPR'22</h1>
+</div><br>
+
+<h1 class="title is-1 publication-title" style="text-align: center; font-size: 30px;">Using the best performing algorithm (Alex: Neighbor Convolution)</h1><br>
 
 <h1 class="title is-1 publication-title" style="text-align: center; font-size: 20px;">mag12: before filtering hot pixels&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;mag12: after filtering hot pixels&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;mag11: before filtering hot pixels&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;mag11: after filtering hot pixels</h1>
 
